@@ -90,7 +90,6 @@ Valve also provides the official [**Fossilize**](https://github.com/ValveSoftwar
     ```bash
     export MESA_SHADER_CACHE_DIR="/path/to/game/custom_shader_cache"
     export MESA_SHADER_CACHE=1
-    "
     ./game_binary
     ```
 ---
@@ -101,10 +100,21 @@ Valve also provides the official [**Fossilize**](https://github.com/ValveSoftwar
 3. Without enabling shader pre-cache and downloading at least the base game, steam will not download shader pre-cache files.It is not required to download any DLC as steam bundles shader pre-cache per game basis.Any time a game updates and the graphics pipeline changes steam updates these shader files.
 4. Upload your files into the submission form: [Google Form](https://forms.gle/By3EVEbef5e7B6Zk8) or host the files in your desired platform and make a request.Submission process is explained in detail in the form.
 5. **Verification:** The integrity of the database will be verified locally before packaging it into official GitHub Releases.
+---
+
+## DXVK/VKD3D Shader Cache (🐧Linux Only)
+- No need to explain.
+- Cache files will released into a seperate release version.
+- There will be a section in the form to upload these cache files (zipped only).
+- As valve doesn't collect and combine dxvk shader caches as .foz files,these files will only include translation caches for a specific playthrough with specific cutscenes and places (if someone goes through all cutscenes and all places thats a different case).
+- But still, using pre-compiled caches can reduce cpu translation overhead on low end machines.
 
 
+## ⚖️ Legal Disclaimer & Notice of Non-Infringement
 
+This repository and its maintainers are not affiliated with, authorized by, endorsed by, or in any way officially connected with Valve Corporation, Steam, or any game publishers/developers.
 
-
-
+- **No Proprietary Game Code:** The files hosted in this repository (`.foz` / `.foz.zipped`) consist strictly of compiled SPIR-V binary pipeline states, driver state definitions, and metadata recorded by the Fossilize layer during runtime execution.
+- **No Commercial Assets:** These files **do not** contain proprietary game source code, 3D models, textures, audio tracks, executable binaries (`.exe`/`.dll`), or game engine archives.
+- **Fair Use & Utility:** Caches are shared strictly for interoperability, performance optimization, and archival purposes under educational and non-commercial fair use principles.
 
