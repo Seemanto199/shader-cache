@@ -1,6 +1,6 @@
 # Shader Cache Database
 
-A community-driven repository providing pre-compiled Fossilize shader pipeline databases (`.foz` / `.foz.zipped`) and DXVK/VKD3D shader caches for popular Steam games. Optimized to eliminate in-game micro-stutters, dxvk/vkd3d translation overhead and shader compilation lag across Linux (Proton/Steam Deck) and Windows.
+A community-driven repository providing pre-compiled Fossilize shader pipeline databases (`.foz` / `.foz.zipped`) for popular Steam games. Optimized to eliminate in-game micro-stutters and shader compilation lag across Linux (Proton/Steam Deck) and Windows.
 
 
 
@@ -100,13 +100,6 @@ The standalone replay tool (`fossilize-replay`) is bundled within your Steam dir
 4. Upload your files into the submission form: [Google Form](https://forms.gle/By3EVEbef5e7B6Zk8) or host the files in your desired platform and make a request.Detailed instructions are available directly inside the form
 5. **Verification:** The integrity of the database will be verified locally before packaging it into official GitHub Releases.
 ---
-
-## DXVK/VKD3D Shader Cache (🐧Linux Only)
-- Released under separate release versions
-- Dedicated upload fields are provided in the submission form (zipped archives only)
-- Unlike Valve's Fossilize system (.foz), DXVK does not automatically aggregate global shader states; these caches reflect translation states from specific gameplay sessions (e.g., specific cutscenes or areas)
-- However, pre-compiled DXVK caches can significantly minimize CPU translation overhead on lower-end systems
-
 
 ## ⚖️ Legal Disclaimer & Notice of Non-Infringement
 
