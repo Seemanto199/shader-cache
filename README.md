@@ -44,8 +44,8 @@ The standalone replay tool (`fossilize-replay`) is bundled within your Steam dir
 - **🐧 Linux Terminal:**
   ```bash
   # Set environment variables to route output to your staging folder
-  export __GL_SHADER_DISK_CACHE_PATH="./.foz/download" # For NVIDIA
-  export MESA_SHADER_CACHE_DIR="./.foz/download"        # For AMD/Mesa
+  export __GL_SHADER_DISK_CACHE_PATH="./"  # For NVIDIA
+  export MESA_SHADER_CACHE_DIR="./"        # For AMD/Mesa
 
   # Run the replayer tool with whitelist and progress tracking
   ~/.local/share/Steam/ubuntu12_64/fossilize_replay  --progress --on-disk-replay-whitelist "path\to\steam_pipeline_cache_whitelist.foz" "path\to\steam_pipeline_cache.foz"
