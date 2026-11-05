@@ -1,6 +1,6 @@
 # Shader Cache Database
 
-A community-driven repository providing pre-compiled Fossilize shader pipeline databases (`.foz` / `.foz.zipped`) and DXVK/VKD3D shader caches for popular Steam games. Optimized to eliminate in-game micro-stutters,dxvk/vkd3d translation overhead and shader compilation lag across Linux (Proton/Steam Deck) and Windows.
+A community-driven repository providing pre-compiled Fossilize shader pipeline databases (`.foz` / `.foz.zipped`) and DXVK/VKD3D shader caches for popular Steam games. Optimized to eliminate in-game micro-stutters, dxvk/vkd3d translation overhead and shader compilation lag across Linux (Proton/Steam Deck) and Windows.
 
 
 
@@ -24,10 +24,9 @@ As a result, pre-compiled pipeline caches hosted here are not restricted to the 
 
 ## 🚀 How to Use
 
-###
-You do **not** need Steam running to inject these caches. Valve includes a standalone replay tool (`fossilize-replay`) in steam download directory that parses `.foz` files and injects compiled pipelines directly into your GPU driver's native cache (`NVIDIA DXCache` / `AMD VkCache`).
+Valve provides the official [**Fossilize**](https://github.com/ValveSoftware/Fossilize) toolset (`fossilize-replay`), which operates independently of any Steam installation. You do **not** need Steam running to inject these caches. 
 
-Valve also provides the official [**Fossilize**](https://github.com/ValveSoftware/Fossilize) toolset (`fossilize-replay` and `fossilize-valgrind` / recording hooks), which operates entirely independently of Steam intsallation.
+The standalone replay tool (`fossilize-replay`) is bundled within your Steam directory; it parses `.foz` files and injects compiled pipelines directly into your GPU driver's native cache (`NVIDIA DXCache` / `AMD VkCache`).
 
 
 ### 1. Download the game's corresponding `.foz` or `.foz.zipped` file from the [Releases page](../../releases) and extract the archive.
@@ -60,7 +59,7 @@ Valve also provides the official [**Fossilize**](https://github.com/ValveSoftwar
   * **NVIDIA Linux:** `~/.cache/nvidia/GLCache/`
   * **AMD Windows:** `C:\Users\<YourUsername>\AppData\Local\AMD\VkCache\`
   * **AMD Linux:** `~/.cache/mesa_shader_cache/`
-  * **⚠️ Important (Disable Auto-Cleanup):** Graphics drivers periodically purge unused cache bins. Make to increase cache maximum size or disable auto cache delete.
+  * **⚠️ Important (Disable Auto-Cleanup):** Graphics drivers periodically purge unused cache bins. Make sure to increase cache maximum size or disable auto cache delete.
 ---
 
 
@@ -98,16 +97,15 @@ Valve also provides the official [**Fossilize**](https://github.com/ValveSoftwar
 1. You need to own the game at steam.Enable shader pre-caching on steam at `Settings > Downloads > Shader Pre-Caching > Enable Shader Pre-cache`
 2. Download the base game (at minimum),launch the game,steam will download shader pre-cache in the background at first launch.
 3. Without enabling shader pre-cache and downloading at least the base game, steam will not download shader pre-cache files.It is not required to download any DLC as steam bundles shader pre-cache per game basis.Any time a game updates and the graphics pipeline changes steam updates these shader files.
-4. Upload your files into the submission form: [Google Form](https://forms.gle/By3EVEbef5e7B6Zk8) or host the files in your desired platform and make a request.Submission process is explained in detail in the form.
+4. Upload your files into the submission form: [Google Form](https://forms.gle/By3EVEbef5e7B6Zk8) or host the files in your desired platform and make a request.Detailed instructions are available directly inside the form
 5. **Verification:** The integrity of the database will be verified locally before packaging it into official GitHub Releases.
 ---
 
 ## DXVK/VKD3D Shader Cache (🐧Linux Only)
-- No need to explain.
-- Cache files will released into a seperate release version.
-- There will be a section in the form to upload these cache files (zipped only).
-- As valve doesn't collect and combine dxvk shader caches as .foz files,these files will only include translation caches for a specific playthrough with specific cutscenes and places (if someone goes through all cutscenes and all places thats a different case).
-- But still, using pre-compiled caches can reduce cpu translation overhead on low end machines.
+- Released under separate release versions
+- Dedicated upload fields are provided in the submission form (zipped archives only)
+- Unlike Valve's Fossilize system (.foz), DXVK does not automatically aggregate global shader states; these caches reflect translation states from specific gameplay sessions (e.g., specific cutscenes or areas)
+- However, pre-compiled DXVK caches can significantly minimize CPU translation overhead on lower-end systems
 
 
 ## ⚖️ Legal Disclaimer & Notice of Non-Infringement
